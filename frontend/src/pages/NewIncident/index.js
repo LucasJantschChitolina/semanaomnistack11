@@ -9,7 +9,7 @@ import './styles.css';
 import logoImg from '../../assets/logo.svg'
 
 export default function NewIncident (){
-    const[title, setTitle] = useState ('');
+    const[titulo, setTitulo] = useState ('');
     const[description, setDescription] = useState ('');
     const[value, setValue] = useState ('');
 
@@ -21,7 +21,7 @@ export default function NewIncident (){
         e.preventDefault();
 
         const data = {
-            title,
+            titulo,
             description,
             value,
         };
@@ -56,8 +56,8 @@ export default function NewIncident (){
         <form onSubmit={handleNewIncident}>
             <input 
                 placeholder="Título do caso"
-                value={title}
-                onChange={e => setTitle(e.target.value)}
+                value={titulo}
+                onChange={e => setTitulo(e.target.value)}
                 />
             <textarea 
                 placeholder="Descrição"  
